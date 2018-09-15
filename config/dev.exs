@@ -39,8 +39,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :graphical, Graphical.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "neighbor",
+  password: "pgpassword",
   database: "graphical_dev",
   hostname: "localhost",
   pool_size: 10
