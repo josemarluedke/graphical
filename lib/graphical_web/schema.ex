@@ -18,6 +18,12 @@ defmodule GraphicalWeb.Schema do
     end
   end
 
+  input_object :update_user_params do
+    field :name, :string
+    field :email, :string
+    field :password, :string
+  end
+
   input_object :update_post_params do
     field :title, non_null(:string)
     field :body, non_null(:string)
@@ -44,6 +50,13 @@ defmodule GraphicalWeb.Schema do
       arg :id, non_null(:integer)
 
       resolve &Graphical.PostResolver.delete/2
+    end
+
+    field :update_user, type: :user do
+      arg :id, non_null(:integer)
+      arg :user, :update_user_params
+
+      resolve &Graphical.UserResolver.update/2
     end
   end
 
