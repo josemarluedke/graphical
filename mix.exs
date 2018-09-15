@@ -39,6 +39,11 @@ defmodule Graphical.Mixfile do
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
+      {:poison, "~> 3.0.0"},
+      {:absinthe, "~> 1.4"},
+      {:absinthe_plug, "~> 1.4"},
+      {:faker, "~> 0.10.0"},
+      {:absinthe_ecto, "~> 0.1.3"},
     ]
   end
 
