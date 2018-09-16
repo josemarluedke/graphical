@@ -16,10 +16,10 @@ alias Graphical.Posts
 Accounts.create_user(%{name: "Josemar Luedke", email: "josemar@test.com"})
 Accounts.create_user(%{name: "Someone Else", email: "some@else.com"})
 
-for _ <- 1 .. 10 do
+for _ <- 1..10 do
   Posts.create_post(%{
-    title: Faker.Lorem.sentence,
-    body: Faker.Lorem.paragraph,
+    title: Faker.Lorem.sentence(),
+    body: Faker.Lorem.paragraph(),
     user_id: [1, 2] |> Enum.take_random(1) |> hd
   })
 end

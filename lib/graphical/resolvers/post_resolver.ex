@@ -16,6 +16,6 @@ defmodule Graphical.PostResolver do
 
   def delete(%{id: id}, _info) do
     Posts.get_post!(id)
-    |> Posts.delete_post
+    |> Posts.delete_post()
   end
 end
